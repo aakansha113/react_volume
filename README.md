@@ -138,6 +138,8 @@ $docker run --rm -d \
   -v ./src:/app/src \
   react-app:v2
 
+Access: 👉 http://localhost:3000
+
 # When you edit src/App.tsx, the browser refreshes automatically.
 
 
