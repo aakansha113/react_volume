@@ -1,4 +1,4 @@
-## Dockerized React App (Live Reload Enabled)
+# Dockerized React App (Live Reload Enabled)
 This project demonstrates how to run a React application inside Docker with live code reloading.
 Any changes made inside src/App.tsx (or any file in src/) will automatically refresh in the browser.
 
@@ -71,7 +71,7 @@ Any changes made inside src/App.tsx (or any file in src/) will automatically ref
                    http://localhost:3000
                     (Optimized Production UI)
 
-# Project Structure
+## Project Structure
 react-app/
 │
 ├── Dockerfile      Production build (Nginx)
@@ -83,7 +83,7 @@ react-app/
     ├── App.tsx
     ├── index.tsx
 
-# 1. Create the React + TypeScript Project
+## 1. Create the React + TypeScript Project
 ```
 $mkdir react-app
 
@@ -91,15 +91,15 @@ $cd react-app
 
 $npx create-react-app --template typescript react-app
 ```
-# Move into the generated folder:
+## Move into the generated folder:
 ```
 $cd react-app
 ```
-# Start locally to verify:
+## Start locally to verify:
 ```
 $npm start
 ```
-# Build the React app:
+## Build the React app:
 ```
 $npm run build
 ```
@@ -107,30 +107,30 @@ $npm run build
 ```
 $npx http-server@14.1.1 build
 ```
-# 2. Build the Dockerfile:
+## 2. Build the Dockerfile:
 
 Dockerfile.dev (Used for Development)
 
 Dockerfile  (Production)
 
-# Build Production Image
+## Build Production Image
 ```
 $docker build -t react-app:v1 .
 ```
-# Run Production Container
+## Run Production Container
 ```
 $docker run --rm -d -p 3000:80 react-app:v1
 ```
 Access:
 👉 http://localhost:3000
 
-# 3. Dockerfile.dev (Development with Live Reload)
+## 3. Dockerfile.dev (Development with Live Reload)
 
-# Build Dev Image
+## Build Dev Image
 ```
 $docker build -t react-app:v2 -f Dockerfile.dev .
 ```
-# Run with Live Reload (Important):
+## Run with Live Reload (Important):
 ```
 $docker run --rm -d \
   -p 3000:3000 \
@@ -140,7 +140,7 @@ $docker run --rm -d \
 ```
 Access: 👉 http://localhost:3000
 
-# When you edit src/App.tsx, the browser refreshes automatically.
+### When you edit src/App.tsx, the browser refreshes automatically.
 
 
 
